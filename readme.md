@@ -1,12 +1,12 @@
 # Sort Specific Node
 
 
-This will answer the question of how to apply an sort to a specific single node in a `TreeView` leaving the rest untouched. 
+This example will to apply an sort to a specific single node in a `TreeView` leaving the rest untouched. 
 
 ![before and after sort node z ascending](https://github.com/IVSoftware/sort_specific_node/blob/master/sort_specific_node/ReadMe/screenshot.png)
 
 
-This example will iterates the `TreeView` looking for a match for an arbitrary [Predicate](https://docs.microsoft.com/en-us/dotnet/api/system.predicate-1?view=net-6.0). If found, it applies an individualized sort method (specified at runtime) to that specific node and avoids making a call the `Sort` method for the entire `TreeView` because that would add an unnecessary layer of complexity.
+It achieves this outcome by iterating the `TreeView` looking for a match for an arbitrary [Predicate](https://docs.microsoft.com/en-us/dotnet/api/system.predicate-1?view=net-6.0). If found, it applies an individualized sort method (specified at runtime) to that specific node and avoids making a call the `Sort` method for the entire `TreeView` because that would add an unnecessary layer of complexity.
 
 ***
 **Method that sorts a node based on a specified comparer function**
