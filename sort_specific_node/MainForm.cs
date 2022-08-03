@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace sort_specific_node
@@ -16,7 +17,11 @@ namespace sort_specific_node
             treeView.Invalidated += (sender, e) => checkBoxSorted.Checked = treeView.Sorted;
             treeView.ExpandAll();
             treeView.Iterate(Index, new IndexArgs());
+            treeView.Iterate(LogPath, null);
+            treeView.BeforeSelect += (sender, e) => e.Cancel = !_isTreeInitialized;
+            Task.Delay(10).GetAwaiter().OnCompleted(() => _isTreeInitialized = true);
         }
+        private bool _isTreeInitialized = false;
         bool LogPath(TreeNode node, object unused)
         {
             var labels = new List<string>() { node.Text };

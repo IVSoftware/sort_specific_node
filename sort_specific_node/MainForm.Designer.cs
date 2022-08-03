@@ -106,6 +106,8 @@ namespace sort_specific_node
             // 
             // checkBoxSorted
             // 
+            this.checkBoxSorted.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxSorted.AutoSize = true;
             this.checkBoxSorted.Location = new System.Drawing.Point(318, 11);
             this.checkBoxSorted.Name = "checkBoxSorted";
@@ -144,6 +146,8 @@ namespace sort_specific_node
             // 
             // textBoxList
             // 
+            this.textBoxList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxList.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxList.Location = new System.Drawing.Point(318, 166);
             this.textBoxList.Multiline = true;
@@ -153,6 +157,8 @@ namespace sort_specific_node
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 94F));
