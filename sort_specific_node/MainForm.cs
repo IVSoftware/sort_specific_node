@@ -24,16 +24,7 @@ namespace sort_specific_node
         private bool _isTreeInitialized = false;
         bool LogPath(TreeNode node, object unused)
         {
-            var labels = new List<string>() { node.Text };
-
-            var traverse = node.Parent;
-            while (traverse != null)
-            {
-                labels.Insert(0, traverse.Text);
-                traverse = traverse.Parent;
-            }
-            var path = string.Join(@"\", labels);
-
+            var path = node.Path();
             textBoxList.AppendText($"{path}{Environment.NewLine}");
             return false;
         }
@@ -99,15 +90,7 @@ namespace sort_specific_node
 
         private void buttonSortZAsc_Click(object sender, EventArgs e)
         {
-            var args =
-               new SortIfNodeMatchArgs
-               {
-                   Predicate = (node) => node.Text == "z",
-
-                   // This will sort in the order of A-Z
-                   Sorter = (a, b) => a.Text.CompareTo(b.Text),
-               };
-            treeView.Iterate(SortIfNodeMatch, args);
+            treeView.SortIfNodeFound(@"Node1\z", (a, b) => a.Text.CompareTo(b.Text));
             treeView.Iterate(LogPath, null);
         }
 
@@ -182,6 +165,55 @@ namespace sort_specific_node
                 if(node.Iterate(fx, args)) return true;
             }
             return false;
+        }
+
+        public static string Path(this TreeNode node)
+        {
+            var labels = new List<string>() { node.Text };
+            var traverse = node.Parent;
+            while (traverse != null)
+            {
+                labels.Insert(0, traverse.Text);
+                traverse = traverse.Parent;
+            }
+            return string.Join(@"\", labels);
+        }
+
+        public static TreeNode Find(this TreeView treeView, string path)
+        {
+            var parse = path.Split('\\');
+            var nodes = treeView.Nodes;
+            TreeNode node = null;
+            foreach (var text in parse)
+            {
+                node = nodes.Cast<TreeNode>().FirstOrDefault(node => node.Text == text);
+                if (node == null) break;
+                nodes = node.Nodes;
+            }
+            return node;
+        }
+
+        public static void Sort(
+            this TreeNode node,
+            Func<TreeNode, TreeNode, int> sorter)
+        {
+            var list = node.Nodes.Cast<TreeNode>().ToList();
+            list.Sort((a, b) => sorter(a, b));
+            node.Nodes.Clear();
+            foreach (var sorted in list)
+            {
+                node.Nodes.Add(sorted);
+            }
+        }
+
+        public static bool SortIfNodeFound(
+            this TreeView treeView, 
+            string path, 
+            Func<TreeNode, TreeNode, int> sorter)
+        {
+            var node = treeView.Find(path);
+            node?.Sort(sorter);
+            return node != null;
         }
     }
 }
