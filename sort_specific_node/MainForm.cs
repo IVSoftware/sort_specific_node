@@ -12,6 +12,7 @@ namespace sort_specific_node
         public MainForm()
         {
             InitializeComponent();
+            treeView.Sorted = false;
             treeView.Invalidated += (sender, e) => checkBoxSorted.Checked = treeView.Sorted;
             treeView.ExpandAll();
             treeView.Iterate(Index, new IndexArgs());
