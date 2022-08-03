@@ -8,7 +8,7 @@ This example will apply an sort to a specific single node in a `TreeView` leavin
 ***
 **Find the target node**
 
-Given a constraint on the `TreeView` that the fully-qualified path to any node (for example, "Node1\z") is unique, the target can be obtained very efficiently by making an extension for `TreeView` that returns the specified node (or `null` if not found).
+Given a rule for the `TreeView` that the fully-qualified path to any node (for example, `@"Node1\z"`) is unique, the target can be obtained very efficiently by making an extension for `TreeView` that returns the specified node (or `null` if not found).
 
     public static TreeNode Find(this TreeView treeView, string path)
     {
