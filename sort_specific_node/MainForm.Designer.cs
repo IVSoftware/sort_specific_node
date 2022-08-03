@@ -29,26 +29,30 @@ namespace sort_specific_node
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Node0");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("A");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Z");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("N");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Y");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("H");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("z", new System.Windows.Forms.TreeNode[] {
-            treeNode3,
-            treeNode4,
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Node");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("etc");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Node0", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2});
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("A");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("X");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("N");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Y");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("H");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("z", new System.Windows.Forms.TreeNode[] {
             treeNode5,
-            treeNode6});
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("b");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("t");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Node1", new System.Windows.Forms.TreeNode[] {
-            treeNode2,
+            treeNode6,
             treeNode7,
-            treeNode8,
-            treeNode9});
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Node4");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Node5");
+            treeNode8});
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("b");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("t");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Node1", new System.Windows.Forms.TreeNode[] {
+            treeNode4,
+            treeNode9,
+            treeNode10,
+            treeNode11});
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Node4");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Node5");
             this.treeView = new System.Windows.Forms.TreeView();
             this.checkBoxSorted = new System.Windows.Forms.CheckBox();
             this.buttonSortNode1 = new System.Windows.Forms.Button();
@@ -72,36 +76,44 @@ namespace sort_specific_node
             this.treeView.Cursor = System.Windows.Forms.Cursors.Default;
             this.treeView.Location = new System.Drawing.Point(0, 0);
             this.treeView.Name = "treeView";
-            treeNode1.Name = "Node0";
-            treeNode1.Text = "Node0";
-            treeNode2.Name = "A";
-            treeNode2.Text = "A";
-            treeNode3.Name = "Z";
-            treeNode3.Text = "Z";
-            treeNode4.Name = "N";
-            treeNode4.Text = "N";
-            treeNode5.Name = "Y";
-            treeNode5.Text = "Y";
-            treeNode6.Name = "H";
-            treeNode6.Text = "H";
-            treeNode7.Name = "z";
-            treeNode7.Text = "z";
-            treeNode8.Name = "b";
-            treeNode8.Text = "b";
-            treeNode9.Name = "t";
-            treeNode9.Text = "t";
+            treeNode1.Name = "Node";
+            treeNode1.Text = "Node";
+            treeNode2.Name = "etc";
+            treeNode2.Text = "etc";
+            treeNode3.Name = "Node0";
+            treeNode3.Text = "Node0";
+            treeNode4.Name = "A";
+            treeNode4.Text = "A";
+            treeNode5.Name = "X";
+            treeNode5.Text = "X";
+            treeNode6.Name = "N";
+            treeNode6.Text = "N";
+            treeNode7.Name = "Y";
+            treeNode7.Text = "Y";
+            treeNode8.Name = "H";
+            treeNode8.Text = "H";
+            treeNode9.BackColor = System.Drawing.Color.Honeydew;
+            treeNode9.ForeColor = System.Drawing.Color.DarkSlateGray;
+            treeNode9.Name = "z";
+            treeNode9.Text = "z";
             treeNode10.Name = "b";
-            treeNode10.Text = "Node1";
-            treeNode11.Name = "Node4";
-            treeNode11.Text = "Node4";
-            treeNode12.Name = "Node5";
-            treeNode12.Text = "Node5";
+            treeNode10.Text = "b";
+            treeNode11.Name = "t";
+            treeNode11.Text = "t";
+            treeNode12.BackColor = System.Drawing.Color.Honeydew;
+            treeNode12.ForeColor = System.Drawing.Color.DarkSlateGray;
+            treeNode12.Name = "b";
+            treeNode12.Text = "Node1";
+            treeNode13.Name = "Node4";
+            treeNode13.Text = "Node4";
+            treeNode14.Name = "Node5";
+            treeNode14.Text = "Node5";
             this.treeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode10,
-            treeNode11,
-            treeNode12});
-            this.treeView.Size = new System.Drawing.Size(290, 452);
+            treeNode3,
+            treeNode12,
+            treeNode13,
+            treeNode14});
+            this.treeView.Size = new System.Drawing.Size(290, 462);
             this.treeView.TabIndex = 0;
             // 
             // checkBoxSorted
@@ -152,13 +164,12 @@ namespace sort_specific_node
             this.textBoxList.Location = new System.Drawing.Point(318, 166);
             this.textBoxList.Multiline = true;
             this.textBoxList.Name = "textBoxList";
-            this.textBoxList.Size = new System.Drawing.Size(275, 266);
+            this.textBoxList.Size = new System.Drawing.Size(275, 276);
             this.textBoxList.TabIndex = 3;
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 94F));
@@ -234,7 +245,7 @@ namespace sort_specific_node
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(618, 444);
+            this.ClientSize = new System.Drawing.Size(618, 454);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.textBoxList);
             this.Controls.Add(this.checkBoxSorted);

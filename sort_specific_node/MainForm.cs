@@ -16,7 +16,7 @@ namespace sort_specific_node
             treeView.Sorted = false;
             treeView.Invalidated += (sender, e) => checkBoxSorted.Checked = treeView.Sorted;
             treeView.ExpandAll();
-            treeView.Iterate(Index, new IndexArgs());
+            treeView.Iterate(Index, null);
             treeView.Iterate(LogPath, null);
             treeView.BeforeSelect += (sender, e) => e.Cancel = !_isTreeInitialized;
             Task.Delay(10).GetAwaiter().OnCompleted(() => _isTreeInitialized = true);
@@ -39,6 +39,7 @@ namespace sort_specific_node
         }
         bool SortIfNodeMatch(TreeNode node, SortIfNodeMatchArgs args)
         {
+            checkBoxSorted.Checked = false;
             if((args.Predicate == null) || (args.Predicate(node)))
             {
                 var list = node.Nodes.Cast<TreeNode>().ToList();
@@ -60,18 +61,10 @@ namespace sort_specific_node
             public Predicate<TreeNode> Predicate { get; set; }
             public Func<TreeNode, TreeNode, int> Sorter { get; set; }
         }
-        bool Index(TreeNode node, IndexArgs args)
+        bool Index(TreeNode node, object unused)
         {
-            node.Tag = args.Index++;
+            node.Tag = node.Index;
             return false;
-        }
-        // Overloaded so that the arg can be 'object'
-        bool Index(TreeNode node, object args) =>
-            Index(node, (IndexArgs)args);
-
-        class IndexArgs
-        {
-            public int Index { get; set; }
         }
 
         private void checkBoxSorted_CheckedChanged(object sender, EventArgs e)
@@ -108,7 +101,7 @@ namespace sort_specific_node
                {
                    Predicate = (node) => node.Text == "z",
 
-                   // This will sort in the order of H N Y Z
+                   // This will sort in the order of A-Z
                    Sorter = (a, b) => a.Text.CompareTo(b.Text),
                };
             treeView.Iterate(SortIfNodeMatch, args);
@@ -122,6 +115,7 @@ namespace sort_specific_node
                {
                    Predicate = (node) => node.Text == "z",
 
+                   // This will sort in the order of Z-A
                    Sorter = (a, b) => b.Text.CompareTo(a.Text),
                };
             treeView.Iterate(SortIfNodeMatch, args);
@@ -135,7 +129,7 @@ namespace sort_specific_node
                {
                     Predicate = (node) => node.Text == "Node1",
 
-                    // This will sort in the order of H N Y Z
+                    // This will sort in the order of A-Z
                     Sorter = (a, b) => a.Text.CompareTo(b.Text),
                };
             treeView.Iterate(SortIfNodeMatch, args);
@@ -149,7 +143,7 @@ namespace sort_specific_node
                {
                    Predicate = (node) => node.Text == "Node1",
 
-                   // This will sort in the order of H N Y Z
+                   // This will sort in the order of Z-A
                    Sorter = (a, b) => b.Text.CompareTo(a.Text),
                };
             treeView.Iterate(SortIfNodeMatch, args);
