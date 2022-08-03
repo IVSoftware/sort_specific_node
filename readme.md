@@ -27,7 +27,7 @@ Given a rule for the `TreeView` that the fully-qualified path to any node (for e
 ***
 **Sort children of target node**
 
-This extension for `TreeNode` sorts its children according to the coparer function passed in as an argument.
+This extension for `TreeNode` sorts its children according to the comparer function passed in as an argument.
 
     public static void Sort(
         this TreeNode node,
