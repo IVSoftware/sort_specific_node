@@ -90,50 +90,42 @@ namespace sort_specific_node
 
         private void buttonSortZAsc_Click(object sender, EventArgs e)
         {
-            treeView.SortIfNodeFound(@"Node1\z", (a, b) => a.Text.CompareTo(b.Text));
+            treeView.SortIfNodeFound(
+                @"Node1\z", 
+                (a, b) => a.Text.CompareTo(b.Text) // A-Z
+            );
             treeView.Iterate(LogPath, null);
+            buttonRevert.Visible = true;
         }
 
         private void buttonSortZDesc_Click(object sender, EventArgs e)
         {
-            var args =
-               new SortIfNodeMatchArgs
-               {
-                   Predicate = (node) => node.Text == "z",
-
-                   // This will sort in the order of Z-A
-                   Sorter = (a, b) => b.Text.CompareTo(a.Text),
-               };
-            treeView.Iterate(SortIfNodeMatch, args);
+            treeView.SortIfNodeFound(
+                @"Node1\z", 
+                (a, b) => b.Text.CompareTo(a.Text) // Z-A
+            );
             treeView.Iterate(LogPath, null);
+            buttonRevert.Visible = true;
         }
 
         private void buttonSortNode1_Click(object sender, EventArgs e)
         {
-            var args =
-               new SortIfNodeMatchArgs
-               {
-                    Predicate = (node) => node.Text == "Node1",
-
-                    // This will sort in the order of A-Z
-                    Sorter = (a, b) => a.Text.CompareTo(b.Text),
-               };
-            treeView.Iterate(SortIfNodeMatch, args);
+            treeView.SortIfNodeFound(
+                @"Node1",
+                (a, b) => a.Text.CompareTo(b.Text) // A-Z
+            );
             treeView.Iterate(LogPath, null);
+            buttonRevert.Visible = true;
         }
 
         private void buttonSortNode1Desc_Click(object sender, EventArgs e)
         {
-            var args =
-               new SortIfNodeMatchArgs
-               {
-                   Predicate = (node) => node.Text == "Node1",
-
-                   // This will sort in the order of Z-A
-                   Sorter = (a, b) => b.Text.CompareTo(a.Text),
-               };
-            treeView.Iterate(SortIfNodeMatch, args);
+            treeView.SortIfNodeFound(
+                @"Node1",
+                (a, b) => b.Text.CompareTo(a.Text) // Z-A
+            );
             treeView.Iterate(LogPath, null);
+            buttonRevert.Visible = true;
         }
 
         private void buttonRevert_Click(object sender, EventArgs e) => revert();
