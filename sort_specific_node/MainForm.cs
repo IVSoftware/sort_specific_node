@@ -189,9 +189,18 @@ namespace sort_specific_node
             this TreeNode node,
             Func<TreeNode, TreeNode, int> sorter)
         {
+            // Make sure the TreeView will allow reordering
+            if (node.TreeView != null)
+            {
+                node.TreeView.Sorted = false;
+            }
+            // Copy the nodes to a list
             var list = node.Nodes.Cast<TreeNode>().ToList();
+            // Sort the list however the `Sorter` says to.
             list.Sort((a, b) => sorter(a, b));
+            // Clear the 'old' order
             node.Nodes.Clear();
+            // Install the 'new' order
             foreach (var sorted in list)
             {
                 node.Nodes.Add(sorted);
