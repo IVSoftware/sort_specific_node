@@ -1,7 +1,7 @@
 # Sort Specific Node
 
 
-This sample answers the question of how to apply an sort to a specific single node in a `TreeView` leaving the rest untouched. 
+This will answer the question of how to apply an sort to a specific single node in a `TreeView` leaving the rest untouched. 
 
 ![before and after sort node z ascending](https://github.com/IVSoftware/sort_specific_node/blob/master/sort_specific_node/ReadMe/screenshot.png)
 
