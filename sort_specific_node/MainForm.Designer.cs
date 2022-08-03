@@ -65,6 +65,7 @@ namespace sort_specific_node
             this.labelDesc = new System.Windows.Forms.Label();
             this.labelZ = new System.Windows.Forms.Label();
             this.buttonSortNode1Desc = new System.Windows.Forms.Button();
+            this.buttonRevert = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -241,6 +242,17 @@ namespace sort_specific_node
             this.buttonSortNode1Desc.UseVisualStyleBackColor = true;
             this.buttonSortNode1Desc.Click += new System.EventHandler(this.buttonSortNode1Desc_Click);
             // 
+            // buttonRevert
+            // 
+            this.buttonRevert.Location = new System.Drawing.Point(415, 8);
+            this.buttonRevert.Name = "buttonRevert";
+            this.buttonRevert.Size = new System.Drawing.Size(82, 32);
+            this.buttonRevert.TabIndex = 2;
+            this.buttonRevert.Text = "Revert";
+            this.buttonRevert.UseVisualStyleBackColor = true;
+            this.buttonRevert.Visible = false;
+            this.buttonRevert.Click += new System.EventHandler(this.buttonRevert_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -250,6 +262,7 @@ namespace sort_specific_node
             this.Controls.Add(this.textBoxList);
             this.Controls.Add(this.checkBoxSorted);
             this.Controls.Add(this.treeView);
+            this.Controls.Add(this.buttonRevert);
             this.Name = "MainForm";
             this.Text = "Main Form";
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -272,6 +285,7 @@ namespace sort_specific_node
         private System.Windows.Forms.Label labelDesc;
         private System.Windows.Forms.Label labelZ;
         private System.Windows.Forms.Button buttonSortNode1Desc;
+        private System.Windows.Forms.Button buttonRevert;
     }
 }
 

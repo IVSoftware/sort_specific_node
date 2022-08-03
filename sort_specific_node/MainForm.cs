@@ -40,6 +40,7 @@ namespace sort_specific_node
         bool SortIfNodeMatch(TreeNode node, SortIfNodeMatchArgs args)
         {
             checkBoxSorted.Checked = false;
+            buttonRevert.Visible = true;
             if((args.Predicate == null) || (args.Predicate(node)))
             {
                 var list = node.Nodes.Cast<TreeNode>().ToList();
@@ -72,6 +73,7 @@ namespace sort_specific_node
             if(checkBoxSorted.Checked)
             {
                 treeView.Sort();
+                buttonRevert.Visible = true;
             }
             else
             {
@@ -92,6 +94,7 @@ namespace sort_specific_node
                    Sorter = (a, b) => ((int)a.Tag).CompareTo(((int)b.Tag)),
                };
             treeView.Iterate(SortIfNodeMatch, args);
+            buttonRevert.Visible = false;
         }
 
         private void buttonSortZAsc_Click(object sender, EventArgs e)
@@ -149,6 +152,8 @@ namespace sort_specific_node
             treeView.Iterate(SortIfNodeMatch, args);
             treeView.Iterate(LogPath, null);
         }
+
+        private void buttonRevert_Click(object sender, EventArgs e) => revert();
     }
 
     delegate bool Fx(TreeNode node, object args);
