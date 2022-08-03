@@ -60,10 +60,10 @@ namespace sort_specific_node
             this.buttonSortZDesc = new System.Windows.Forms.Button();
             this.textBoxList = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.labelNode1 = new System.Windows.Forms.Label();
             this.labelAsc = new System.Windows.Forms.Label();
             this.labelDesc = new System.Windows.Forms.Label();
             this.labelZ = new System.Windows.Forms.Label();
+            this.labelNode1 = new System.Windows.Forms.Label();
             this.buttonSortNode1Desc = new System.Windows.Forms.Button();
             this.buttonRevert = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
@@ -93,7 +93,7 @@ namespace sort_specific_node
             treeNode7.Text = "Y";
             treeNode8.Name = "H";
             treeNode8.Text = "H";
-            treeNode9.BackColor = System.Drawing.Color.Honeydew;
+            treeNode9.BackColor = System.Drawing.Color.PaleTurquoise;
             treeNode9.ForeColor = System.Drawing.Color.DarkSlateGray;
             treeNode9.Name = "z";
             treeNode9.Text = "z";
@@ -132,7 +132,7 @@ namespace sort_specific_node
             // 
             // buttonSortNode1
             // 
-            this.buttonSortNode1.Location = new System.Drawing.Point(99, 69);
+            this.buttonSortNode1.Location = new System.Drawing.Point(99, 30);
             this.buttonSortNode1.Name = "buttonSortNode1";
             this.buttonSortNode1.Size = new System.Drawing.Size(82, 32);
             this.buttonSortNode1.TabIndex = 2;
@@ -141,7 +141,7 @@ namespace sort_specific_node
             // 
             // buttonSortZ
             // 
-            this.buttonSortZ.Location = new System.Drawing.Point(99, 30);
+            this.buttonSortZ.Location = new System.Drawing.Point(99, 69);
             this.buttonSortZ.Name = "buttonSortZ";
             this.buttonSortZ.Size = new System.Drawing.Size(82, 32);
             this.buttonSortZ.TabIndex = 2;
@@ -150,7 +150,7 @@ namespace sort_specific_node
             // 
             // buttonSortZDesc
             // 
-            this.buttonSortZDesc.Location = new System.Drawing.Point(188, 30);
+            this.buttonSortZDesc.Location = new System.Drawing.Point(188, 69);
             this.buttonSortZDesc.Name = "buttonSortZDesc";
             this.buttonSortZDesc.Size = new System.Drawing.Size(83, 32);
             this.buttonSortZDesc.TabIndex = 2;
@@ -176,14 +176,14 @@ namespace sort_specific_node
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 94F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.labelNode1, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.labelAsc, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.labelDesc, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.buttonSortZDesc, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.buttonSortZ, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.buttonSortNode1, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.labelZ, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.buttonSortNode1Desc, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.labelZ, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.buttonSortZDesc, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.buttonSortZ, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.labelNode1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.buttonSortNode1, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.buttonSortNode1Desc, 2, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(318, 55);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
@@ -192,16 +192,6 @@ namespace sort_specific_node
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(275, 105);
             this.tableLayoutPanel1.TabIndex = 4;
-            // 
-            // labelNode1
-            // 
-            this.labelNode1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelNode1.Location = new System.Drawing.Point(4, 66);
-            this.labelNode1.Name = "labelNode1";
-            this.labelNode1.Size = new System.Drawing.Size(88, 38);
-            this.labelNode1.TabIndex = 5;
-            this.labelNode1.Text = "\"Node1\"";
-            this.labelNode1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelAsc
             // 
@@ -225,17 +215,31 @@ namespace sort_specific_node
             // 
             // labelZ
             // 
+            this.labelZ.BackColor = System.Drawing.Color.PaleTurquoise;
             this.labelZ.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelZ.Location = new System.Drawing.Point(4, 27);
+            this.labelZ.Location = new System.Drawing.Point(5, 70);
+            this.labelZ.Margin = new System.Windows.Forms.Padding(4);
             this.labelZ.Name = "labelZ";
-            this.labelZ.Size = new System.Drawing.Size(88, 38);
+            this.labelZ.Size = new System.Drawing.Size(86, 30);
             this.labelZ.TabIndex = 4;
-            this.labelZ.Text = "\"z\"";
+            this.labelZ.Text = "z";
             this.labelZ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelNode1
+            // 
+            this.labelNode1.BackColor = System.Drawing.Color.Honeydew;
+            this.labelNode1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelNode1.Location = new System.Drawing.Point(5, 31);
+            this.labelNode1.Margin = new System.Windows.Forms.Padding(4);
+            this.labelNode1.Name = "labelNode1";
+            this.labelNode1.Size = new System.Drawing.Size(86, 30);
+            this.labelNode1.TabIndex = 5;
+            this.labelNode1.Text = "Node1";
+            this.labelNode1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonSortNode1Desc
             // 
-            this.buttonSortNode1Desc.Location = new System.Drawing.Point(188, 69);
+            this.buttonSortNode1Desc.Location = new System.Drawing.Point(188, 30);
             this.buttonSortNode1Desc.Name = "buttonSortNode1Desc";
             this.buttonSortNode1Desc.Size = new System.Drawing.Size(82, 32);
             this.buttonSortNode1Desc.TabIndex = 2;
