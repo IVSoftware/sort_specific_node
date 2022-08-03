@@ -54,7 +54,7 @@ This extension for `TreeNode` sorts its children according to the coparer functi
 ***
 **Method to sort (A-Z) a specific node of a TreeView.**
 
-So, to answer the question "is any method to sort (A-Z) a specific node of a TreeView" let's say we manufacture such a method by making an extension for `TreeView` that does just that. For the `path` argument specify the entire hierarchal path like @"Node1" or @"Node1\z".
+So, to answer the question **Is there any method to sort a specific node of a TreeView from A-Z** let's say we manufacture such a method by making an extension for `TreeView` that does just that. For the `path` argument specify the entire hierarchal path like @"Node1" or @"Node1\z".
 
     public static bool SortIfNodeFound(
         this TreeView treeView, 
