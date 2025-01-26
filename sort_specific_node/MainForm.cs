@@ -19,19 +19,13 @@ namespace sort_specific_node
             treeView.Iterate(Index, null);
             treeView.Iterate(LogPath, null);
 
-            // COSMETIC
-            // Suppresses the default initial selection of Node0
-            // The explanation "may or may not" still exist here: https://stackoverflow.com/a/79388733/5438626
-            treeView.BeforeSelect += localTemporaryHandler;
-            void localTemporaryHandler(object sender, TreeViewCancelEventArgs e)
-            {
-                e.Cancel = true;
-                treeView.BeforeSelect -= localTemporaryHandler;
-            }
+            // COSMETIC - Suppresses the default initial selection of Node0
+            Task.Delay(10)
+                .GetAwaiter()
+                .OnCompleted(() => _isTreeInitialized = true);
+            treeView.BeforeSelect += (sender, e) => e.Cancel = !_isTreeInitialized;
         }
-
-        // NO LONGER REQUIRED private bool _isTreeInitialized = false;
-
+        private bool _isTreeInitialized = false;
         bool LogPath(TreeNode node, object unused)
         {
             var path = node.Path();
