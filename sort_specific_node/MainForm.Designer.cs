@@ -31,52 +31,39 @@ namespace sort_specific_node
         {
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Node");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("etc");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Node0", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2});
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Node0", new System.Windows.Forms.TreeNode[] { treeNode1, treeNode2 });
             System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("A");
             System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("X");
             System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("N");
             System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Y");
             System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("H");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("z", new System.Windows.Forms.TreeNode[] {
-            treeNode5,
-            treeNode6,
-            treeNode7,
-            treeNode8});
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("z", new System.Windows.Forms.TreeNode[] { treeNode5, treeNode6, treeNode7, treeNode8 });
             System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("b");
             System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("t");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Node1", new System.Windows.Forms.TreeNode[] {
-            treeNode4,
-            treeNode9,
-            treeNode10,
-            treeNode11});
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Node1", new System.Windows.Forms.TreeNode[] { treeNode4, treeNode9, treeNode10, treeNode11 });
             System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Node4");
             System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Node5");
-            this.treeView = new System.Windows.Forms.TreeView();
-            this.checkBoxSorted = new System.Windows.Forms.CheckBox();
-            this.buttonSortNode1 = new System.Windows.Forms.Button();
-            this.buttonSortZ = new System.Windows.Forms.Button();
-            this.buttonSortZDesc = new System.Windows.Forms.Button();
-            this.textBoxList = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.labelAsc = new System.Windows.Forms.Label();
-            this.labelDesc = new System.Windows.Forms.Label();
-            this.labelZ = new System.Windows.Forms.Label();
-            this.labelNode1 = new System.Windows.Forms.Label();
-            this.buttonSortNode1Desc = new System.Windows.Forms.Button();
-            this.buttonRevert = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.SuspendLayout();
+            treeView = new System.Windows.Forms.TreeView();
+            checkBoxSorted = new System.Windows.Forms.CheckBox();
+            buttonSortNode1 = new System.Windows.Forms.Button();
+            buttonSortZ = new System.Windows.Forms.Button();
+            buttonSortZDesc = new System.Windows.Forms.Button();
+            textBoxList = new System.Windows.Forms.TextBox();
+            tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            labelAsc = new System.Windows.Forms.Label();
+            labelDesc = new System.Windows.Forms.Label();
+            labelZ = new System.Windows.Forms.Label();
+            labelNode1 = new System.Windows.Forms.Label();
+            buttonSortNode1Desc = new System.Windows.Forms.Button();
+            buttonRevert = new System.Windows.Forms.Button();
+            tableLayoutPanel1.SuspendLayout();
+            SuspendLayout();
             // 
             // treeView
             // 
-            this.treeView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.treeView.Cursor = System.Windows.Forms.Cursors.Default;
-            this.treeView.Location = new System.Drawing.Point(0, 0);
-            this.treeView.Name = "treeView";
+            treeView.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            treeView.Location = new System.Drawing.Point(0, 0);
+            treeView.Name = "treeView";
             treeNode1.Name = "Node";
             treeNode1.Text = "Node";
             treeNode2.Name = "etc";
@@ -109,170 +96,164 @@ namespace sort_specific_node
             treeNode13.Text = "Node4";
             treeNode14.Name = "Node5";
             treeNode14.Text = "Node5";
-            this.treeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3,
-            treeNode12,
-            treeNode13,
-            treeNode14});
-            this.treeView.Size = new System.Drawing.Size(290, 462);
-            this.treeView.TabIndex = 0;
+            treeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] { treeNode3, treeNode12, treeNode13, treeNode14 });
+            treeView.Size = new System.Drawing.Size(290, 462);
+            treeView.TabIndex = 0;
             // 
             // checkBoxSorted
             // 
-            this.checkBoxSorted.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBoxSorted.AutoSize = true;
-            this.checkBoxSorted.Location = new System.Drawing.Point(318, 11);
-            this.checkBoxSorted.Name = "checkBoxSorted";
-            this.checkBoxSorted.Size = new System.Drawing.Size(91, 29);
-            this.checkBoxSorted.TabIndex = 1;
-            this.checkBoxSorted.Text = "Sorted";
-            this.checkBoxSorted.UseVisualStyleBackColor = true;
-            this.checkBoxSorted.CheckedChanged += new System.EventHandler(this.checkBoxSorted_CheckedChanged);
+            checkBoxSorted.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            checkBoxSorted.AutoSize = true;
+            checkBoxSorted.Location = new System.Drawing.Point(318, 11);
+            checkBoxSorted.Name = "checkBoxSorted";
+            checkBoxSorted.Size = new System.Drawing.Size(91, 29);
+            checkBoxSorted.TabIndex = 1;
+            checkBoxSorted.Text = "Sorted";
+            checkBoxSorted.UseVisualStyleBackColor = true;
+            checkBoxSorted.CheckedChanged += checkBoxSorted_CheckedChanged;
             // 
             // buttonSortNode1
             // 
-            this.buttonSortNode1.Location = new System.Drawing.Point(99, 30);
-            this.buttonSortNode1.Name = "buttonSortNode1";
-            this.buttonSortNode1.Size = new System.Drawing.Size(82, 32);
-            this.buttonSortNode1.TabIndex = 2;
-            this.buttonSortNode1.UseVisualStyleBackColor = true;
-            this.buttonSortNode1.Click += new System.EventHandler(this.buttonSortNode1_Click);
+            buttonSortNode1.Location = new System.Drawing.Point(99, 30);
+            buttonSortNode1.Name = "buttonSortNode1";
+            buttonSortNode1.Size = new System.Drawing.Size(82, 32);
+            buttonSortNode1.TabIndex = 2;
+            buttonSortNode1.UseVisualStyleBackColor = true;
+            buttonSortNode1.Click += buttonSortNode1_Click;
             // 
             // buttonSortZ
             // 
-            this.buttonSortZ.Location = new System.Drawing.Point(99, 69);
-            this.buttonSortZ.Name = "buttonSortZ";
-            this.buttonSortZ.Size = new System.Drawing.Size(82, 32);
-            this.buttonSortZ.TabIndex = 2;
-            this.buttonSortZ.UseVisualStyleBackColor = true;
-            this.buttonSortZ.Click += new System.EventHandler(this.buttonSortZAsc_Click);
+            buttonSortZ.Location = new System.Drawing.Point(99, 69);
+            buttonSortZ.Name = "buttonSortZ";
+            buttonSortZ.Size = new System.Drawing.Size(82, 32);
+            buttonSortZ.TabIndex = 2;
+            buttonSortZ.UseVisualStyleBackColor = true;
+            buttonSortZ.Click += buttonSortZAsc_Click;
             // 
             // buttonSortZDesc
             // 
-            this.buttonSortZDesc.Location = new System.Drawing.Point(188, 69);
-            this.buttonSortZDesc.Name = "buttonSortZDesc";
-            this.buttonSortZDesc.Size = new System.Drawing.Size(83, 32);
-            this.buttonSortZDesc.TabIndex = 2;
-            this.buttonSortZDesc.UseVisualStyleBackColor = true;
-            this.buttonSortZDesc.Click += new System.EventHandler(this.buttonSortZDesc_Click);
+            buttonSortZDesc.Location = new System.Drawing.Point(188, 69);
+            buttonSortZDesc.Name = "buttonSortZDesc";
+            buttonSortZDesc.Size = new System.Drawing.Size(83, 32);
+            buttonSortZDesc.TabIndex = 2;
+            buttonSortZDesc.UseVisualStyleBackColor = true;
+            buttonSortZDesc.Click += buttonSortZDesc_Click;
             // 
             // textBoxList
             // 
-            this.textBoxList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxList.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxList.Location = new System.Drawing.Point(318, 166);
-            this.textBoxList.Multiline = true;
-            this.textBoxList.Name = "textBoxList";
-            this.textBoxList.Size = new System.Drawing.Size(275, 276);
-            this.textBoxList.TabIndex = 3;
+            textBoxList.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            textBoxList.Font = new System.Drawing.Font("Segoe UI", 7F);
+            textBoxList.Location = new System.Drawing.Point(318, 166);
+            textBoxList.Multiline = true;
+            textBoxList.Name = "textBoxList";
+            textBoxList.Size = new System.Drawing.Size(275, 276);
+            textBoxList.TabIndex = 3;
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 94F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.labelAsc, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.labelDesc, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.labelZ, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.buttonSortZDesc, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.buttonSortZ, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.labelNode1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.buttonSortNode1, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.buttonSortNode1Desc, 2, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(318, 55);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(275, 105);
-            this.tableLayoutPanel1.TabIndex = 4;
+            tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
+            tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            tableLayoutPanel1.ColumnCount = 3;
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 94F));
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel1.Controls.Add(labelAsc, 1, 0);
+            tableLayoutPanel1.Controls.Add(labelDesc, 2, 0);
+            tableLayoutPanel1.Controls.Add(labelZ, 0, 2);
+            tableLayoutPanel1.Controls.Add(buttonSortZDesc, 2, 2);
+            tableLayoutPanel1.Controls.Add(buttonSortZ, 1, 2);
+            tableLayoutPanel1.Controls.Add(labelNode1, 0, 1);
+            tableLayoutPanel1.Controls.Add(buttonSortNode1, 1, 1);
+            tableLayoutPanel1.Controls.Add(buttonSortNode1Desc, 2, 1);
+            tableLayoutPanel1.Location = new System.Drawing.Point(318, 55);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 3;
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel1.Size = new System.Drawing.Size(275, 105);
+            tableLayoutPanel1.TabIndex = 4;
             // 
             // labelAsc
             // 
-            this.labelAsc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelAsc.Location = new System.Drawing.Point(99, 1);
-            this.labelAsc.Name = "labelAsc";
-            this.labelAsc.Size = new System.Drawing.Size(82, 25);
-            this.labelAsc.TabIndex = 3;
-            this.labelAsc.Text = "Asc";
-            this.labelAsc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            labelAsc.Dock = System.Windows.Forms.DockStyle.Fill;
+            labelAsc.Location = new System.Drawing.Point(99, 1);
+            labelAsc.Name = "labelAsc";
+            labelAsc.Size = new System.Drawing.Size(82, 25);
+            labelAsc.TabIndex = 3;
+            labelAsc.Text = "Asc";
+            labelAsc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelDesc
             // 
-            this.labelDesc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelDesc.Location = new System.Drawing.Point(188, 1);
-            this.labelDesc.Name = "labelDesc";
-            this.labelDesc.Size = new System.Drawing.Size(83, 25);
-            this.labelDesc.TabIndex = 1;
-            this.labelDesc.Text = "Desc";
-            this.labelDesc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            labelDesc.Dock = System.Windows.Forms.DockStyle.Fill;
+            labelDesc.Location = new System.Drawing.Point(188, 1);
+            labelDesc.Name = "labelDesc";
+            labelDesc.Size = new System.Drawing.Size(83, 25);
+            labelDesc.TabIndex = 1;
+            labelDesc.Text = "Desc";
+            labelDesc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelZ
             // 
-            this.labelZ.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.labelZ.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelZ.Location = new System.Drawing.Point(5, 70);
-            this.labelZ.Margin = new System.Windows.Forms.Padding(4);
-            this.labelZ.Name = "labelZ";
-            this.labelZ.Size = new System.Drawing.Size(86, 30);
-            this.labelZ.TabIndex = 4;
-            this.labelZ.Text = "z";
-            this.labelZ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            labelZ.BackColor = System.Drawing.Color.PaleTurquoise;
+            labelZ.Dock = System.Windows.Forms.DockStyle.Fill;
+            labelZ.Location = new System.Drawing.Point(5, 70);
+            labelZ.Margin = new System.Windows.Forms.Padding(4);
+            labelZ.Name = "labelZ";
+            labelZ.Size = new System.Drawing.Size(86, 30);
+            labelZ.TabIndex = 4;
+            labelZ.Text = "z";
+            labelZ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelNode1
             // 
-            this.labelNode1.BackColor = System.Drawing.Color.Honeydew;
-            this.labelNode1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelNode1.Location = new System.Drawing.Point(5, 31);
-            this.labelNode1.Margin = new System.Windows.Forms.Padding(4);
-            this.labelNode1.Name = "labelNode1";
-            this.labelNode1.Size = new System.Drawing.Size(86, 30);
-            this.labelNode1.TabIndex = 5;
-            this.labelNode1.Text = "Node1";
-            this.labelNode1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            labelNode1.BackColor = System.Drawing.Color.Honeydew;
+            labelNode1.Dock = System.Windows.Forms.DockStyle.Fill;
+            labelNode1.Location = new System.Drawing.Point(5, 31);
+            labelNode1.Margin = new System.Windows.Forms.Padding(4);
+            labelNode1.Name = "labelNode1";
+            labelNode1.Size = new System.Drawing.Size(86, 30);
+            labelNode1.TabIndex = 5;
+            labelNode1.Text = "Node1";
+            labelNode1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonSortNode1Desc
             // 
-            this.buttonSortNode1Desc.Location = new System.Drawing.Point(188, 30);
-            this.buttonSortNode1Desc.Name = "buttonSortNode1Desc";
-            this.buttonSortNode1Desc.Size = new System.Drawing.Size(82, 32);
-            this.buttonSortNode1Desc.TabIndex = 2;
-            this.buttonSortNode1Desc.UseVisualStyleBackColor = true;
-            this.buttonSortNode1Desc.Click += new System.EventHandler(this.buttonSortNode1Desc_Click);
+            buttonSortNode1Desc.Location = new System.Drawing.Point(188, 30);
+            buttonSortNode1Desc.Name = "buttonSortNode1Desc";
+            buttonSortNode1Desc.Size = new System.Drawing.Size(82, 32);
+            buttonSortNode1Desc.TabIndex = 2;
+            buttonSortNode1Desc.UseVisualStyleBackColor = true;
+            buttonSortNode1Desc.Click += buttonSortNode1Desc_Click;
             // 
             // buttonRevert
             // 
-            this.buttonRevert.Location = new System.Drawing.Point(415, 8);
-            this.buttonRevert.Name = "buttonRevert";
-            this.buttonRevert.Size = new System.Drawing.Size(82, 32);
-            this.buttonRevert.TabIndex = 2;
-            this.buttonRevert.Text = "Revert";
-            this.buttonRevert.UseVisualStyleBackColor = true;
-            this.buttonRevert.Visible = false;
-            this.buttonRevert.Click += new System.EventHandler(this.buttonRevert_Click);
+            buttonRevert.Location = new System.Drawing.Point(415, 8);
+            buttonRevert.Name = "buttonRevert";
+            buttonRevert.Size = new System.Drawing.Size(82, 32);
+            buttonRevert.TabIndex = 2;
+            buttonRevert.Text = "Revert";
+            buttonRevert.UseVisualStyleBackColor = true;
+            buttonRevert.Visible = false;
+            buttonRevert.Click += buttonRevert_Click;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(618, 454);
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.textBoxList);
-            this.Controls.Add(this.checkBoxSorted);
-            this.Controls.Add(this.treeView);
-            this.Controls.Add(this.buttonRevert);
-            this.Name = "MainForm";
-            this.Text = "Main Form";
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(618, 454);
+            Controls.Add(tableLayoutPanel1);
+            Controls.Add(textBoxList);
+            Controls.Add(checkBoxSorted);
+            Controls.Add(treeView);
+            Controls.Add(buttonRevert);
+            Name = "MainForm";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "Main Form";
+            tableLayoutPanel1.ResumeLayout(false);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

@@ -18,10 +18,18 @@ namespace sort_specific_node
             treeView.ExpandAll();
             treeView.Iterate(Index, null);
             treeView.Iterate(LogPath, null);
-            treeView.BeforeSelect += (sender, e) => e.Cancel = !_isTreeInitialized;
-            Task.Delay(10).GetAwaiter().OnCompleted(() => _isTreeInitialized = true);
+
+            // COSMETIC - Suppresses the default initial selection of Node0
+            treeView.BeforeSelect += localTemporaryHandler;
+            void localTemporaryHandler(object sender, TreeViewCancelEventArgs e)
+            {
+                e.Cancel = true;
+                treeView.BeforeSelect -= localTemporaryHandler;
+            }
         }
-        private bool _isTreeInitialized = false;
+
+        // NO LONGER REQUIRED private bool _isTreeInitialized = false;
+
         bool LogPath(TreeNode node, object unused)
         {
             var path = node.Path();
