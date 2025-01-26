@@ -25,7 +25,7 @@ namespace sort_specific_node
                 .OnCompleted(() => _isTreeInitialized = true);
             treeView.BeforeSelect += (sender, e) => e.Cancel = !_isTreeInitialized;
         }
-        public bool _isTreeInitialized
+        private bool _isTreeInitialized
         {
             get => _bk;
             set
