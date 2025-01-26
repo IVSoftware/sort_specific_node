@@ -25,7 +25,20 @@ namespace sort_specific_node
                 .OnCompleted(() => _isTreeInitialized = true);
             treeView.BeforeSelect += (sender, e) => e.Cancel = !_isTreeInitialized;
         }
-        private bool _isTreeInitialized = false;
+        public bool _isTreeInitialized
+        {
+            get => _bk;
+            set
+            {
+                if (!Equals(_bk, value))
+                {
+                    _bk = value;
+                    Debug.Assert(_isTreeInitialized = true, "Expecting value to go true after 10 ms.");
+                }
+            }
+        }
+        bool _bk = false;
+
         bool LogPath(TreeNode node, object unused)
         {
             var path = node.Path();
